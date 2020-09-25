@@ -1,11 +1,18 @@
 <template>
 <div class="topnav">
-    <div class="logo">LOGO</div>
+    <router-link to="/" class="logo">
+        <svg class="icon">
+            <use xlink:href="#icon-moon"></use>
+        </svg>
+    </router-link>
     <ul class="menu">
-        <li>菜单1</li>
-        <li>菜单2</li>
+        <li>
+            <router-link to="/doc">文档</router-link>
+        </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <svg v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleMenu">
+        <use xlink:href="#icon-menu"></use>
+    </svg>
 </div>
 </template>
 
@@ -13,36 +20,47 @@
 import {
     inject,
     Ref
-} from 'vue'
+} from "vue";
 export default {
+    props: {
+        toggleMenuButtonVisible: {
+            type: Boolean,
+            default: false,
+        },
+    },
     setup() {
-        const asideVisible = inject < Ref < boolean > > ('asideVisible')
+        const asideVisible = inject < Ref < boolean >> ("asideVisible");
         const toggleMenu = () => {
-            asideVisible.value = !asideVisible.value
-        }
+            asideVisible.value = !asideVisible.value;
+        };
         return {
-            toggleMenu
-        }
-    }
-}
+            toggleMenu,
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .topnav {
-    background-color: pink;
+    color: #005b57;
     display: flex;
     padding: 16px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 20;
     justify-content: center;
     align-items: center;
 
     >.logo {
         max-width: 6em;
         margin-right: auto;
+
+        >svg {
+            width: 35px;
+            height: 35px;
+        }
     }
 
     >.menu {
@@ -56,9 +74,8 @@ export default {
     }
 
     >.toggleAside {
-        width: 24px;
-        height: 24px;
-        background-color: red;
+        width: 32px;
+        height: 32px;
         position: absolute;
         left: 16px;
         top: 50%;
@@ -66,7 +83,7 @@ export default {
         display: none;
     }
 
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
         >.menu {
             display: none;
         }
@@ -78,7 +95,6 @@ export default {
         >.toggleAside {
             display: inline;
         }
-
     }
 }
 </style>

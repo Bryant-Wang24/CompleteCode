@@ -1,5 +1,5 @@
 <template>
 <div>
-    Doc默认页面
+    <slot />
 </div>
 </template>
