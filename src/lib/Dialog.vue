@@ -58,12 +58,12 @@ export default {
             }
         }
         const ok = () => {
-            if (props.ok?.() !== false) {
+            if (props.ok && props.ok() !== false) {
                 close()
             }
         }
         const cancel = () => {
-            context.emit('cancel')
+            props.cancel && props.cancel()
             close()
         }
         return {
