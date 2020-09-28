@@ -1,6 +1,6 @@
 {
   "name": "wangqiushuang-ui-1",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "files": ["dist/lib/*"],
   "main": "dist/lib/gulu.js",
   "scripts": {
