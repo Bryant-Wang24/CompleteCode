@@ -5,7 +5,7 @@ git init &&
 git add . &&
 git commit -m "update" &&
 git branch -M master &&
-git remote add origins git@gitee.com:wang_qiushuang/lunzi-ui.git &&
+git remote add origins git@gitee.com:wang_qiushuang/sunui.git &&
 git push -f -u origins master &&
 cd -
-echo   https://wang_qiushuang.gitee.io/lunzi-ui 
+echo   https://wang_qiushuang.gitee.io/sunui 
