@@ -22,7 +22,6 @@ export default {
             }
 
         });
-        // 使用第一个参数才能访问第二个函数
     }
 }
 </script>

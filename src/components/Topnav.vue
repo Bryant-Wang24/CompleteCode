@@ -42,6 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
+    z-index: 20;
     color: #005b57;
     display: flex;
     padding: 16px;
@@ -49,7 +50,6 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
     justify-content: center;
     align-items: center;
 
