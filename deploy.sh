@@ -5,7 +5,7 @@ git init &&
 git add . &&
 git commit -m "update" &&
 git branch -M master &&
-git remote add origin git@github.com:Bryant-Wang24/sunui.git &&
+git remote add origin git@github.com:Bryant-Wang24/moonlight-ui.git &&
 git push -f -u origin master &&
 cd -
-echo   https://bryant-wang24.github.io/sunui/index.html 
+echo   https://bryant-wang24.github.io/moonlight-ui/index.html 
